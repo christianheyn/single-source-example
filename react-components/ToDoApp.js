@@ -36,19 +36,17 @@ const handleItemDone = (id) => {
 const handleAddItem = () => {
     const futureItem = store.getState(FUTURE_ITEM);
 
-    if (futureItem === '') {
-        return undefined;
+    if (futureItem !== '') {
+        dispatch({
+            path: TODO_ITEMS,
+            payload: items => [ { id: Date.now(), label: futureItem }, ...items ],
+        });
+
+        dispatch({
+            path: FUTURE_ITEM,
+            payload: '',
+        });
     }
-
-    dispatch({
-        path: TODO_ITEMS,
-        payload: items => [ { id: Date.now(), label: futureItem }, ...items ],
-    });
-
-    dispatch({
-        path: FUTURE_ITEM,
-        payload: '',
-    });
 };
 
 const handleInputChange = event => dispatch({
@@ -60,7 +58,7 @@ const handleInputKeyDown = (event) => {
     if (event.key === 'Enter') {
         handleAddItem();
     }
-}
+};
 
 const ItemList = props => props.items.map(({ id, label }) => (
     <div key={id} className={props.className || 'item'}>
