@@ -23,7 +23,7 @@ ReactDOM.render(
         </Wrapper>
 
         <h2>ToDo-App</h2>
-        <GithubLink href={'https://github.com/christianheyn/single-source-example/blob/master/react-components/ToDoList.js'} />
+        <GithubLink href={'https://github.com/christianheyn/single-source-example/blob/master/react-components/ToDoApp.js'} />
         <Wrapper>
             <ToDoApp />
         </Wrapper>

@@ -2,8 +2,8 @@
   "name": "single-source-example",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html ",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /"
+    "start": "cross-env NODE_ENV=development parcel app.html ",
+    "build": "cross-env NODE_ENV=production parcel build app.html --no-minify --public-url /"
   },
   "dependencies": {
     "autoprefixer": "^7.2.1",
