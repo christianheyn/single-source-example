@@ -11,7 +11,8 @@
     "parcel-bundler": "latest",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "single-source": "^0.0.9"
+    "react-icons": "^2.2.7",
+    "single-source": "latest"
   },
   "postcss": {
     "modules": false,
